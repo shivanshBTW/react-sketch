@@ -245,6 +245,15 @@ class SketchFieldDemo extends React.Component {
     }
   };
 
+  _onObjectAdded = (e) => {
+    console.log(e);
+    let obj = e.target;
+    obj.__version = 1;
+    // record current object state as json and save as originalState
+    let objState = obj.toJSON();
+    
+  };
+
   _onBackgroundImageDrop = (accepted /*, rejected*/) => {
     if (accepted && accepted.length > 0) {
       let sketch = this._sketch;
@@ -383,6 +392,7 @@ class SketchFieldDemo extends React.Component {
               value={controlledValue}
               // forceValue
               onChange={this._onSketchChange}
+              onObjectAdded={this._onObjectAdded}
               tool={this.state.tool}
             />
           </div>
