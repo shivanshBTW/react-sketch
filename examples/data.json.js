@@ -28,8 +28,8 @@ export default {
             "fillRule": "nonzero",
             "globalCompositeOperation": "source-over",
             "x1": -2.5000111045611817,
-            "x2": 2.5000111045611817,
             "y1": -81.00166757284126,
+            "x2": 2.5000111045611817,
             "y2": 81.00166757284126
         },
         {
